@@ -1,6 +1,6 @@
 ## [rudym.github.io](http://rudym.github.io/) engine pages
 
-Nice engine to build your pages.
+Nice engine to build your GitHub hosted pages.
 
 Just make your changes and then enter from your terminal
 ```
