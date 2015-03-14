@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+  block vars
+  head
+    meta(charset='utf-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='chrome=1')
+    |     
+    title #{title} &mdash; Swift.GitHub.io by rudym
+    // &mdash; Swift.GitHub.io by rudym //@blog
+    // main styles
+    link(href="/public/css/styles.css", rel="stylesheet")
+    |     
+    link(rel='stylesheet', href='/public/css/pygment_trac.css')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    //if lt IE 9
+      script(src='//html5shiv.googlecode.com/svn/trunk/html5.js')
+    link(rel='stylesheet', href='/public/libs/highlight/styles/tomorrow.css')
+    script(src='/public/libs/highlight/highlight.pack.js')
+    script.
+      hljs.initHighlightingOnLoad();
+    block styles
+  body
+    .wrapper
+      .header
+        header
+          h1 Swift.GitHub.io
+          |         
+          p
+          |         
+          p.view
+            a(href='https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKit_Framework/') UIKit Reference
+        |       
+      .container
+        block content
+      .footer
+        footer
+          p
+            small
+              | Wrapped by 
+              a(href='https://github.com/rudym') rudym
+      block scripts
+        script(src='/public/js/scale.fix.js')
+        script(type='text/javascript').
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      block analytics
+        script.
+        // google analytics code, etc...
+        script(type='text/javascript').
+          try {
+          var pageTracker = _gat._getTracker("UA-60734512-2");
+          pageTracker._trackPageview();
+          } catch(err) {}
