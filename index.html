@@ -25,23 +25,47 @@
         </header>      
       </div>
       <div class="container">
-        <section>
-          <pre><code class="swift">//1
-let nextController = UIImagePickerController()
-self.presentViewController(nextController, animated: true, completion: nil)
- 
-//2
-let image = UIImage()
-let nextController2 = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-self.presentViewController(nextController, animated: true, completion: nil)
- 
-//3
-let nextController = UIAlertController(title: "TheTitle", message: "Nofuckaround", preferredStyle: UIAlertControllerStyle.ActionSheet)
-let alertAction = UIAlertAction(title: "Da fuk", style: UIAlertActionStyle.Default) {
-    action in self.dismissViewControllerAnimated(true, completion: nil)
+        <section><h2 id="-uiimagepickercontroller-https-developer-apple-com-library-ios-documentation-uikit-reference-uiimagepickercontroller_class-index-html-"><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIImagePickerController_Class/index.html">UIImagePickerController</a></h2>
+<p>The simplest way to find a media file in your device. This controller can locate it, preview and play it.</p>
+<p>Big downgrade is that this controller have issues with landscape layout. You can&#39;t even start with your application portrait mode unchecked. It is obligatory to check <em>modal</em> and <em>popover</em> usage here.</p>
+<blockquote>
+<h5 id="-where-did-i-take-media-types-from-ref-https-developer-apple-com-library-ios-documentation-filemanagement-conceptual-understanding_utis-understand_utis_conc-understand_utis_conc-html-">*where did I take media types from? - <a href="https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html">ref</a></h5>
+</blockquote>
+
+          <pre><code class="swift">let mycontroller = UIImagePickerController()
+mycontroller.mediaTypes = ["public.movie", "public.image"]
+
+self.presentViewController(mycontroller, animated: true,
+	completion: nil)</code></pre><br><h2 id="-uiactivityviewcontroller-https-developer-apple-com-library-ios-documentation-uikit-reference-uiactivityviewcontroller_class-index-html-"><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIActivityViewController_Class/index.html">UIActivityViewController</a></h2>
+<p>Save, share, print and etc.
+Use it modally on phones and for iPad it is popover.</p>
+<p><code>activityItems</code> is the items you are throwing chosen event for.
+In the test code it is an image object.</p>
+
+          <pre><code class="swift">let image = UIImage()
+
+let mycontroller = UIActivityViewController(
+	activityItems: [image], applicationActivities: nil)
+
+self.presentViewController(mycontroller, animated: true,
+	completion: nil)</code></pre><br><h2 id="-uialertcontroller-https-developer-apple-com-library-ios-documentation-uikit-reference-uialertcontroller_class-index-html-"><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAlertController_Class/index.html">UIAlertController</a></h2>
+<p>Show popup or modal alert messages. You can add many actions by multiple <code>addAction</code>.</p>
+<p>Callbacks by actions go with <code>completion</code>.</p>
+
+          <pre><code class="swift">let nextController = UIAlertController(title: "The Title",
+    message: "The message",
+    preferredStyle: UIAlertControllerStyle.ActionSheet)
+
+let alertAction = UIAlertAction(title: "Ok",
+	style: UIAlertActionStyle.Default) {
+    action in self.dismissViewControllerAnimated(true, 
+    	completion: nil)
 }
+
 nextController.addAction(alertAction)
-self.presentViewController(nextController, animated: true, completion: nil)</code></pre>
+
+self.presentViewController(nextController, animated: true,
+	completion: nil)</code></pre>
         </section>
       </div>
       <div class="footer">

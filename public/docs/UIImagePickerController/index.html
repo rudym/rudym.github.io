@@ -1,0 +1,12 @@
+<h2 id="-uiimagepickercontroller-https-developer-apple-com-library-ios-documentation-uikit-reference-uiimagepickercontroller_class-index-html-"><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIImagePickerController_Class/index.html">UIImagePickerController</a></h2>
+<p>The simplest way to find a media file in your device. This controller can locate it, preview and play it.</p>
+<p>Big downgrade is that this controller have issues with landscape layout. You can&#39;t even start with your application portrait mode unchecked. It is obligatory to check <em>modal</em> and <em>popover</em> usage here.</p>
+<blockquote>
+<h5 id="-where-did-i-take-media-types-from-ref-https-developer-apple-com-library-ios-documentation-filemanagement-conceptual-understanding_utis-understand_utis_conc-understand_utis_conc-html-">*where did I take media types from? - <a href="https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html">ref</a></h5>
+</blockquote>
+
+<pre><code class="swift">let mycontroller = UIImagePickerController()
+mycontroller.mediaTypes = ["public.movie", "public.image"]
+
+self.presentViewController(mycontroller, animated: true,
+	completion: nil)</code></pre>

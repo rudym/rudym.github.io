@@ -1,0 +1,13 @@
+<h2 id="-uiactivityviewcontroller-https-developer-apple-com-library-ios-documentation-uikit-reference-uiactivityviewcontroller_class-index-html-"><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIActivityViewController_Class/index.html">UIActivityViewController</a></h2>
+<p>Save, share, print and etc.
+Use it modally on phones and for iPad it is popover.</p>
+<p><code>activityItems</code> is the items you are throwing chosen event for.
+In the test code it is an image object.</p>
+
+<pre><code class="swift">let image = UIImage()
+
+let mycontroller = UIActivityViewController(
+	activityItems: [image], applicationActivities: nil)
+
+self.presentViewController(mycontroller, animated: true,
+	completion: nil)</code></pre>

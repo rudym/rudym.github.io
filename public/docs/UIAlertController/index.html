@@ -1,0 +1,18 @@
+<h2 id="-uialertcontroller-https-developer-apple-com-library-ios-documentation-uikit-reference-uialertcontroller_class-index-html-"><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAlertController_Class/index.html">UIAlertController</a></h2>
+<p>Show popup or modal alert messages. You can add many actions by multiple <code>addAction</code>.</p>
+<p>Callbacks by actions go with <code>completion</code>.</p>
+
+<pre><code class="swift">let nextController = UIAlertController(title: "The Title",
+    message: "The message",
+    preferredStyle: UIAlertControllerStyle.ActionSheet)
+
+let alertAction = UIAlertAction(title: "Ok",
+	style: UIAlertActionStyle.Default) {
+    action in self.dismissViewControllerAnimated(true, 
+    	completion: nil)
+}
+
+nextController.addAction(alertAction)
+
+self.presentViewController(nextController, animated: true,
+	completion: nil)</code></pre>

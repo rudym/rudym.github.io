@@ -1,18 +1,6 @@
-pre
-  code.swift
-    | //1
-    | let nextController = UIImagePickerController()
-    | self.presentViewController(nextController, animated: true, completion: nil)
-    | 
-    | //2
-    | let image = UIImage()
-    | let nextController2 = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-    | self.presentViewController(nextController, animated: true, completion: nil)
-    | 
-    | //3
-    | let nextController = UIAlertController(title: "TheTitle", message: "Nofuckaround", preferredStyle: UIAlertControllerStyle.ActionSheet)
-    | let alertAction = UIAlertAction(title: "Da fuk", style: UIAlertActionStyle.Default) {
-    |     action in self.dismissViewControllerAnimated(true, completion: nil)
-    | }
-    | nextController.addAction(alertAction)
-    | self.presentViewController(nextController, animated: true, completion: nil)
+include UIImagePickerController/index.jade
+br
+include UIActivityViewController/index.jade
+br
+include UIAlertController/index.jade
+
