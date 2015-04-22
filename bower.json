@@ -1,0 +1,25 @@
+{
+  "name": "Rudym",
+  "version": "0.0.1",
+  "authors": [
+    "rudym"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "rudym"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "highlightjs": "~8.5.0"
+  }
+}
